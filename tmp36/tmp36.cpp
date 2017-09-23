@@ -4,7 +4,7 @@ void TMP36::init(int _analogPin) {
   tmpPin = _analogPin;
 };
 
-void Ultrasonic::update() {
+void TMP36::update() {
   analogRead(tmpPin);
   voltage = reading * 5.0 / 1024.0;
   tempC = (voltage - 0.5) * 100;    //converting from 10 mv per degree wit 500 mV offset
@@ -12,7 +12,7 @@ void Ultrasonic::update() {
   tempF = (tempC * 9.0 / 5.0) + 32.0;
 }
 
-void Ultrasonic::dumpSerial() {
+void TMP36::dumpSerial() {
   Serial.print("Temperature Sensor: ( ");
   
   // Voltage
