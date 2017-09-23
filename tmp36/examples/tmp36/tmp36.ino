@@ -1,4 +1,4 @@
-#include "template.h"
+#include "tmp36.h"
 
 TMP36 example;
 
